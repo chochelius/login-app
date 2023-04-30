@@ -1,4 +1,7 @@
 # Aplicación 
+usuario : admin
+contreseña: admin
+es case sensitive
 
 
 # Getting Started with Create React App
