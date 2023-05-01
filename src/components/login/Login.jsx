@@ -5,13 +5,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 const Login = ({ onSubmit }) => {
-    const [usuario, setUsuario] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    console.log(usuario+" "+password);
+    console.log(email+" "+password);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit({ usuario, password });
+        onSubmit({ email, password });
     }
 
     return (
@@ -26,15 +26,15 @@ const Login = ({ onSubmit }) => {
                             <div className='card-body'>
                                 <form onSubmit={handleSubmit}>
                                     <div className='mt-2'>
-                                        <label htmlFor="usuario" className="form-label">Usuario</label>
+                                        <label htmlFor="email" className="form-label">Correo electrónico</label>
                                         <input
-                                            id="usuario"
-                                            placeholder='Usuario'
+                                            id="email"
+                                            placeholder='email'
                                             type="text"
                                             className="form-control"
                                             onChange={(e) => {
-                                                setUsuario(e.target.value);
-                                                console.log(usuario);
+                                                setEmail(e.target.value);
+                                                console.log(email);
                                             }}
                                         />
                                     </div>
@@ -56,7 +56,7 @@ const Login = ({ onSubmit }) => {
                                             className="btn btn-primary w-100 mt-2"
                                             data-bs-target="#myModal"
                                             data-bs-toggle="modal"
-                                            disabled={!usuario.trim() || !password.trim()}
+                                            disabled={!email.trim() || !password.trim()}
                                             >
                                             Iniciar Sesión
                                         </button>

@@ -9,16 +9,16 @@ function App() {
   const [alerta, setAlerta] = useState('');
   const [aletaType, setAlertaType] = useState('');
 
-  const validarLogin = ( {usuario, password} ) => {
-    const usuarioValido = 'admin';
+  const validarLogin = ( {email, password} ) => {
+    const emailValido = 'admin@admin.com';
     const passwordValido = 'admin';
-    if (usuario === usuarioValido && password === passwordValido) {
+    if (email === emailValido && password === passwordValido) {
       setAlerta('Bienvenido');
       setAlertaType('Administrador');
     } else {
-      setAlerta('Usuario o contraseña incorrectos');
+      setAlerta('email o contraseña incorrectos');
       setAlertaType('Error');
-      console.log(console.log(usuario +  password))
+      console.log(console.log(email +  password))
     }
   }
 

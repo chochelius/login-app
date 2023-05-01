@@ -1,6 +1,6 @@
 # Aplicación 
 usuario : admin
-contreseña: admin
+contreseña: admin@admin.com
 es case sensitive
 
 
